@@ -3,4 +3,4 @@
 2. Appendix A で紹介されているプログラム
 
 # 使用言語
-Racket を使用する
+GNU Guile を使用する
