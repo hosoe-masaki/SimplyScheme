@@ -42,10 +42,11 @@
 	(cons cons)
 	(map map)
 	(apply apply))
-    (define (error-printform x)
-      (if (string? x)
-	  (string-append "\"" x "\"")
-	  x))
+;    (define (error-printform x)
+;      (if (string? x)
+;	  (string-append "\"" x "\"")
+;	  x))
+    (define (error-printform x) x)
     (lambda (string . args)
       (apply error (cons string (map error-printform args))))))
 
@@ -85,16 +86,16 @@
 ;; If your version of Scheme has RANDOM, you should take this out.
 ;; (It gives the same sequence of random numbers every time.) 
 
-(define random
-  (let ((*seed* 1) (quotient quotient) (modulo modulo) (+ +) (- -) (* *) (> >))
-    (lambda (x)
-      (let* ((hi (quotient *seed* 127773))
-	     (low (modulo *seed* 127773))
-	     (test (- (* 16807 low) (* 2836 hi))))
-	(if (> test 0)
-	    (set! *seed* test)
-	    (set! *seed* (+ test 2147483647))))
-      (modulo *seed* x))))
+;(define random
+;  (let ((*seed* 1) (quotient quotient) (modulo modulo) (+ +) (- -) (* *) (> >))
+;    (lambda (x)
+;      (let* ((hi (quotient *seed* 127773))
+;	     (low (modulo *seed* 127773))
+;	     (test (- (* 16807 low) (* 2836 hi))))
+;	(if (> test 0)
+;	    (set! *seed* test)
+;	    (set! *seed* (+ test 2147483647))))
+;      (modulo *seed* x))))
 
 
 ;;; Logo-style word/sentence implementation
