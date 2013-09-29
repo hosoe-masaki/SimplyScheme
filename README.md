@@ -3,4 +3,5 @@
 2. Appendix A で紹介されているプログラム
 
 # 使用言語
-GNU Guile を使用する
+stk-simply を使用する
+※ http://www-inst.eecs.berkeley.edu/~scheme/
