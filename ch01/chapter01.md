@@ -1,6 +1,6 @@
-= Chapter 1 Showing Off Scheme
+# Chapter 1 Showing Off Scheme
 
-== Talking to Scheme
+## Talking to Scheme
 ````
 6
 
@@ -11,17 +11,17 @@
 (word 'comp 'uter)
 ````
 
-== Recovering from Typing Errors
+## Recovering from Typing Errors
 ````
 (+ 2 a)
 ````
 
-== Exiting Scheme
+## Exiting Scheme
 ````
 (exit)
 ````
 
-== Example: Acronyms
+## Example: Acronyms
 ````
 (define (acronym phrase)
   (accumulate word (every first phrase)))
@@ -32,7 +32,7 @@
   (not (member? wd '(a the an if of and for to with))))
 ````
 
-== Example: Pig Latin
+## Example: Pig Latin
 ````
 (define (pigl wd)
   (if (member? (first wd) 'aeiou)
@@ -42,7 +42,7 @@
 (every pigl '(the ballad of john and yoko))
 ````
 
-== Example: Ice Cream Choices
+## Example: Ice Cream Choices
 ````
 (define (choices menu)
   (if (null? menu)
@@ -55,7 +55,7 @@
   (map (lambda (choice) (se item choice)) lst))
 ````
 
-== Example: Combinations from a Set
+## Example: Combinations from a Set
 ````
 (define (combinations size set)
   (cond ((= size 0) '(()))
@@ -66,7 +66,7 @@
                       (combinations size (butfirst set))))))
 ````
 
-== Example: Factorial
+## Example: Factorial
 ````
 (define (factorial n)
   (if (= n 0)
