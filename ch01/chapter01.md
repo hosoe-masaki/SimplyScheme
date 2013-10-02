@@ -1,6 +1,7 @@
-# Chapter 1 Showing Off Scheme
+## Introduction: Functions
+### Chapter 1 Showing Off Scheme
 
-## Talking to Scheme
+#### Talking to Scheme
 ```Scheme
 6
 
@@ -11,17 +12,17 @@
 (word 'comp 'uter)
 ```
 
-## Recovering from Typing Errors
+#### Recovering from Typing Errors
 ```Scheme
 (+ 2 a)
 ```
 
-## Exiting Scheme
+#### Exiting Scheme
 ```Scheme
 (exit)
 ```
 
-## Example: Acronyms
+#### Example: Acronyms
 ```Scheme
 (define (acronym phrase)
   (accumulate word (every first phrase)))
@@ -32,7 +33,7 @@
   (not (member? wd '(a the an if of and for to with))))
 ```
 
-## Example: Pig Latin
+#### Example: Pig Latin
 ```Scheme
 (define (pigl wd)
   (if (member? (first wd) 'aeiou)
@@ -42,7 +43,7 @@
 (every pigl '(the ballad of john and yoko))
 ```
 
-## Example: Ice Cream Choices
+#### Example: Ice Cream Choices
 ```Scheme
 (define (choices menu)
   (if (null? menu)
@@ -55,7 +56,7 @@
   (map (lambda (choice) (se item choice)) lst))
 ```
 
-## Example: Combinations from a Set
+#### Example: Combinations from a Set
 ```Scheme
 (define (combinations size set)
   (cond ((= size 0) '(()))
@@ -66,7 +67,7 @@
                       (combinations size (butfirst set))))))
 ```
 
-## Example: Factorial
+#### Example: Factorial
 ```Scheme
 (define (factorial n)
   (if (= n 0)
