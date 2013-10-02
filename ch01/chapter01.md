@@ -1,6 +1,7 @@
-; = Chapter 1 Showing Off Scheme
+= Chapter 1 Showing Off Scheme
 
-; Talking to Scheme
+== Talking to Scheme
+````
 6
 
 (+ 4 7)
@@ -8,14 +9,20 @@
 (+ 5 6 7 8)
 
 (word 'comp 'uter)
+````
 
-; == Recovering from Typing Errors
-;;(+ 2 a)
+== Recovering from Typing Errors
+````
+(+ 2 a)
+````
 
-; == Exiting Scheme
-;;(exit)
+== Exiting Scheme
+````
+(exit)
+````
 
-; == Example: Acronyms
+== Example: Acronyms
+````
 (define (acronym phrase)
   (accumulate word (every first phrase)))
 
@@ -23,16 +30,20 @@
   (accumulate word (every first (keep real-word? phrase))))
 (define (real-word? wd)
   (not (member? wd '(a the an if of and for to with))))
+````
 
-; == Example: Pig Latin
+== Example: Pig Latin
+````
 (define (pigl wd)
   (if (member? (first wd) 'aeiou)
       (word wd 'ay)
       (pigl (word (butfirst wd) (first wd)))))
 
 (every pigl '(the ballad of john and yoko))
+````
 
-; == Example: Ice Cream Choices
+== Example: Ice Cream Choices
+````
 (define (choices menu)
   (if (null? menu)
       '(())
@@ -42,8 +53,10 @@
                      (car menu))))))
 (define (prepend-every item lst)
   (map (lambda (choice) (se item choice)) lst))
+````
 
-; == Example: Combinations from a Set
+== Example: Combinations from a Set
+````
 (define (combinations size set)
   (cond ((= size 0) '(()))
         ((empty? set) '())
@@ -51,9 +64,12 @@
                                      (combinations (- size 1)
                                                    (butfirst set)))
                       (combinations size (butfirst set))))))
+````
 
-; == Example: Factorial
+== Example: Factorial
+````
 (define (factorial n)
   (if (= n 0)
       1
       (* n (factorial (- n 1)))))
+````
