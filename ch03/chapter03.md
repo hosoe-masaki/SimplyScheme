@@ -13,7 +13,7 @@
 26
 ```
 
-*compound expression
+*compound expression*
 ```Scheme
 (+ 14 7)
 ```
