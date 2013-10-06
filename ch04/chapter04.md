@@ -22,6 +22,7 @@
 #### Argument Names versus Argument Values
 * The name for the name of an argument is *formal parameter*.
 * The technical term for the actual value of the argument is the *actual argument*.
+
 ```Scheme
 (define (f a b)
   (+ (* 3 a) b))
@@ -45,6 +46,7 @@
 
 #### Pitfalls
 * Don't forget that a function can have only *one* return value.
+
 ```Scheme
 (define (sum-of-squares x y)
   (+ (square x)
