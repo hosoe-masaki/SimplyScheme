@@ -1,4 +1,4 @@
-## Introduction: Functions
+## Part I Introduction: Functions
 ### Chapter 1 Showing Off Scheme
 
 #### Talking to Scheme
