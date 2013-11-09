@@ -72,6 +72,7 @@
 * Accumulate transforms the entire word or sentence into a single result by combining all of the elements in some way.
 
 |function|purpose|first argument is a ...|
+|:------:|:-----:|:---------------------:|
 |every|transform|one-argument *transforming* function|
 |keep|select|one-argument *predicate* function|
 |accumulate|combine|two-argument *combining* function|
